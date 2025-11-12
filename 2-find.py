@@ -63,6 +63,7 @@ print(Fore.BLUE + f"vuodelta 1986 Löytyi {count} määrä dokumenttia jotka ova
 
 
 # Harjoitus 1: hae dokumenttien määrä, jossa genereä on ainakin "Comdey"
+# toisinsanoeo, montako elokuvaa, jotka ovat luokiettlu komediksi
 
 count = coll.count_documents({"genres":
                             "Comedy"} )
@@ -70,15 +71,3 @@ print(Fore.GREEN + f"Löytyi {count} dokumenttia\n"+ Style.RESET_ALL)
 
 
 count = coll.count_documents({"genres": "Comedy"})
-
-# Print the result in green
-print(Fore.RED + f"Löytyi {count} elokuvaa, jotka on luokiteltu komediaksi.\n" + Style.RESET_ALL)
-
-
-
-
-
-
-
-# toisinsanoeo, montako elokuvaa, jotka ovat luokiettlu komediksi
-
