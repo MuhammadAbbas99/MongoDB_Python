@@ -1,3 +1,4 @@
+# python -m pip install colorma
 import mongo_connection
 from colorama import Fore, Style, init
 
@@ -13,13 +14,12 @@ coll = db["movies"]
 
 
 ### ===== find vastaa SQL.n SELECT.iä ===== ###
-
 # haetaan kaikki data movies-collection:ista
-'''
+
 documents =  coll.find()    # hakee kaikki, palautta cursorin         # SELECT * FROM movies
 
-# for doc in documents:       # huo: kursorin sisältö tyhjenee tässä täysin
-    # print(doc)
+for doc in documents:       # huo: kursorin sisältö tyhjenee tässä täysin
+   print(doc)
 #   pass
 
 
@@ -59,7 +59,7 @@ count = coll.count_documents(
                             )
 
 print(Fore.BLUE + f"vuodelta 1986 Löytyi {count} määrä dokumenttia jotka ovat yli tunnin pituisia\n"+ Style.RESET_ALL)
-'''
+
 
 
 # Harjoitus 1: hae dokumenttien määrä, jossa genereä on ainakin "Comdey"
